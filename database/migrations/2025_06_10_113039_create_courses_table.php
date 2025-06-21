@@ -14,7 +14,7 @@ return new class extends Migration
     {
         Schema::create(Course::TABLE_NAME, function (Blueprint $table) {
             $table->id();
-            $table->string(Course::TITTLE);
+            $table->string(Course::TITLE);
             $table->text(Course::DESCRIPTION);
             $table->float(Course::PRICE);
             $table->date(Course::START_DATE);

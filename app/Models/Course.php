@@ -30,7 +30,13 @@ class Course extends Model
         self::DESCRIPTION
     ];
 
-    public function user(): BelongsTo {
+    public function user(): BelongsTo
+    {
         return $this->belongsTo(User::class);
+    }
+
+    public function students()
+    {
+        return $this->hasMany(Student::class);
     }
 }

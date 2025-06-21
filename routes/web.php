@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -38,4 +39,14 @@ Route::middleware(['auth'])->group(function(){
         Route::put('/course/update/{id}', 'update')->name('update.course');
         Route::delete('/course/delete', 'destroy')->name('delete.course');
     });
+
+    Route::controller(StudentController::class)->group(function(){
+        Route::get('/student/create', 'create')->name('create.student');
+        Route::post('/student/create', 'store')->name('store.student');
+        Route::get('/student/index', 'index')->name('index.student');
+        Route::get('/student/update/{id}', 'edit')->name('edit.student');
+        Route::put('/student/update/{id}', 'update')->name('update.student');
+        Route::delete('/student/delete', 'destroy')->name('delete.student');
+    });
+
 });

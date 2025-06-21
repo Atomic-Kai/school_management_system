@@ -132,6 +132,12 @@
                         </a>
                     </li>
                     @endcan
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('index.student')}}" aria-expanded="false"
+                            aria-controls="ui-basic">
+                            <span class="menu-title">Student</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <!-- partial -->
@@ -173,7 +179,6 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-
       </div>
     </div>
   </div>
